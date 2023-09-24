@@ -1,8 +1,14 @@
 def main():
     # Set the minimum password length
-    min_length = 10
+    min_length = 8
 
-    # Keep asking for a password until it's long enough
+    # Get a valid password from the user
+    password = get_password(min_length)
+
+    # Print asterisks to show the password's length
+    print_password_length(password)
+
+def get_password(min_length):
     while True:
         # Ask the user for a password
         password = input("Enter a password: ")
@@ -11,12 +17,11 @@ def main():
         if len(password) < min_length:
             print("Password is too short. It should be at least", min_length, "characters long.")
         else:
-            break  # The password is good, exit the loop
+            return password  # Return the valid password
 
-    # Print asterisks to show the password's length
+def print_password_length(password):
     print("Password accepted! Here's a visual representation:")
     print("*" * len(password))
-
 
 if __name__ == "__main__":
     main()
