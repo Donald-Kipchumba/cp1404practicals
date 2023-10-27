@@ -1,3 +1,10 @@
+"""
+programming languages
+start: 9:40am
+End: 9:55am
+time_taken: 15mins.
+"""
+
 from guitar import Guitar
 
 guitar1 = Guitar("Gibson L-5 CES", 1922, 16035.40)
