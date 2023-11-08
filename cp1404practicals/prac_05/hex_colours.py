@@ -13,7 +13,7 @@ COLORS = {
 }
 
 
-# Function to look up and display the hexadecimal color code
+
 
 def lookup_color(color_name):
     try:
@@ -23,7 +23,7 @@ def lookup_color(color_name):
         print("Invalid color name. Please try again.")
 
 
-# Main function to run the program
+
 
 
 def main():
