@@ -1,0 +1,48 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 0
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: 5
+
+        TextInput:
+            id: miles_input
+            spacing: 0
+            input_type: 'number'
+            multiline: False
+            font_size: 20
+            hint_text: 'Enter miles'
+            hint_text_color: 0.5, 0.5, 0.5, 1
+            background_color: 1, 1, 1, 1
+            color: 0, 0, 0, 0
+            on_text: app.handle_convert()
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            Button:
+                text: 'Up'
+                on_press: app.handle_increment(1)
+
+            Button:
+                text: 'Down'
+                on_press: app.handle_increment(-1)
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: 5
+
+        # Commented out the "Convert Miles to Kilometers" button
+        # Button:
+        #     text: 'Convert Miles to Kilometers'
+        #     on_press: app.handle_convert()
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: 5
+
+        Label:
+            text: app.miles_output
+            font_size: 20
+            color: 1, 1, 0, 1
